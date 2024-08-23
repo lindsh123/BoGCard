@@ -19,8 +19,10 @@ function makeSparkle(){
     }, parseFloat(duration) * 1000);
 }
 
-document.getElementById('sparkle-button').addEventListener('click', () => {
+function playSparkles(){
     for (let i = 0; i < numSparkles; i++) {
         makeSparkle();
     }
-});
+}
+
+document.getElementById('sparkle-button').addEventListener('click', playSparkles);
